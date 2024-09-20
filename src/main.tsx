@@ -1,10 +1,10 @@
-import { StrictMode } from 'react'
-import { createRoot } from 'react-dom/client'
-import App from './App.tsx'
-import './index.css'
+import React, {Fragment, StrictMode} from "react"
+import ReactDom from 'react-dom/client'
+import MainApp from "./App.tsx"
 
-createRoot(document.getElementById('root')!).render(
-  <StrictMode>
-    <App />
-  </StrictMode>,
-)
+
+const root = ReactDom.createRoot(document.getElementById("root")!)
+
+root.render(<StrictMode>
+    <MainApp/>
+</StrictMode>)
