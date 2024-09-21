@@ -1,13 +1,14 @@
 import React from 'react'
 import {Component} from 'react'
 import { Button } from '@mui/material'
+import FormUserDetails from './userpersonaldetails'
 
 class UserForm extends Component {
 
     //state-hook definition for class base components
 
     state = {
-        step: 1,
+        step: 0,
         firstName: "",
         lastName: "",
         email: "",
@@ -39,17 +40,44 @@ class UserForm extends Component {
     }
 
     render () {
-        const {step} = this.state
-
+        const {step, firstName, lastName, email, occupation, city, bio} = this.state
+        const values = {step, firstName, lastName, email, occupation, city, bio}
         if(step === 1) {
             return(
-                <React.Fragment>
-                    <h2> holla world!</h2>
-                    <Button variant = "contained"> You feel me!</Button>
-                </React.Fragment>
+                // <React.Fragment>
+                //     <h2> holla world!</h2>
+                //     <Button variant = "contained"> You feel me!</Button>
+                // </React.Fragment>
+                <FormUserDetails nextStep = {this.nextStep} handleChange = {this.changeField} values = {values} />
             )
         }
 
+        if(step === 2 ) {
+            return(
+                <React.Fragment>
+                    <Button variant = "contained">personal contacts</Button>
+                </React.Fragment>
+                
+            )
+        }
+
+        if(step === 3 ) {
+            return(
+                <React.Fragment>
+                    <Button variant = "contained">confirmation</Button>
+                </React.Fragment>
+                
+            )
+        }
+        if(step === 4 ) {
+            return(
+                <React.Fragment>
+                    <Button variant = "contained">success</Button>
+                </React.Fragment>
+                
+            )
+        }
+        
         return(
             <h2>Hello universe!</h2>
         )

@@ -1,11 +1,12 @@
 import { Fragment } from "react"
+import UserForm from "./components/userformsec"
 
 
 const MainApp = () => {
 
     return(
         <Fragment>
-            <h1> hello world!</h1>
+            <UserForm/>
         </Fragment>
     )
 }

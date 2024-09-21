@@ -13,3 +13,5 @@ class FormUserDetails extends Component {
         )
     }
 }
+
+export default FormUserDetails
