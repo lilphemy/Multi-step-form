@@ -1,4 +1,6 @@
+import React from 'react'
 import {Component} from 'react'
+import { Button } from '@mui/material'
 
 class UserForm extends Component {
 
@@ -30,10 +32,28 @@ class UserForm extends Component {
         })
     }
 
+    // handle fields change
+
+    changeField = input => e => {
+        this.setState({[input]: e.target.value})
+    }
 
     render () {
+        const {step} = this.state
+
+        if(step === 1) {
+            return(
+                <React.Fragment>
+                    <h2> holla world!</h2>
+                    <Button variant = "contained"> You feel me!</Button>
+                </React.Fragment>
+            )
+        }
+
         return(
-            <h2> holla world!</h2>
+            <h2>Hello universe!</h2>
         )
     }
 }
+
+export default UserForm
