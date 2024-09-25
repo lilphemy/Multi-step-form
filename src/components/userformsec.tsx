@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { ChangeEvent } from 'react'
 import {Component} from 'react'
 import { Button } from '@mui/material'
 import FormUserDetails from './userpersonaldetails'
@@ -8,7 +8,7 @@ class UserForm extends Component {
     //state-hook definition for class base components
 
     state = {
-        step: 0,
+        step: 1,
         firstName: "",
         lastName: "",
         email: "",
@@ -35,7 +35,7 @@ class UserForm extends Component {
 
     // handle fields change
 
-    changeField = input => e => {
+    changeField = (input: string) => (e: ChangeEvent<HTMLInputElement>) => {
         this.setState({[input]: e.target.value})
     }
 
