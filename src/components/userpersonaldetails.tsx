@@ -2,7 +2,8 @@ import React, {FormEvent, Component} from 'react'
 import {ThemeProvider, createTheme} from '@mui/material/styles'
 import AppBar from '@mui/material/AppBar'
 import TextField from '@mui/material/TextField'
-import { Toolbar, Typography, IconButton } from '@mui/material'
+import { Toolbar, Typography, IconButton, Button} from '@mui/material'
+import {styledCont} from '../styledcomp'
 
 
 
@@ -28,6 +29,7 @@ interface formUserDetails {
     }
 
 }
+
 class FormUserDetails extends Component<formUserDetails> {
 
     continue = (e: any) => {
@@ -42,15 +44,19 @@ class FormUserDetails extends Component<formUserDetails> {
         return(
             <ThemeProvider theme={theme}>
                 <React.Fragment>
-                    <AppBar sx = {{textAlign: "center", flex: "flex", flexDirection: 'row', justifyContent: "space-between"  }}>
+                    <AppBar sx = {{textAlign: "center", position: "relative", flex: "flex", flexDirection: 'row', justifyContent: "space-between"  }}>
                         <Toolbar sx = {{width: '5%'}}>
                             <IconButton edge = 'start' color="secondary" aria-label = "menu"></IconButton>
                         </Toolbar>
                         <Typography sx = {{fontFamily: "sans-serif", color: "WindowText", width: '95%', textAlign: 'center'}}>Multiple step form</Typography>
                     </AppBar>
-                    <TextField variant = "standard" sx = {{position: 'relative', my: '10%', width: '20rem'}} helperText = "Input your firstname" onChange = {handleChange("firstName")} value={values.firstName}/>
-                    <TextField variant = "standard" sx = {{position: 'relative', my: '10%', width: '20rem'}} helperText = "Input your lastname" onChange = {handleChange("lastname")} value={values.lastName}/>
-                    <TextField variant = "standard" sx = {{position: 'relative', my: '10%', width: '20rem'}} helperText = "Input your email" onChange = {handleChange("email")} value={values.email}/>
+                    <TextField variant = "standard" sx = {{position: 'relative', my: '5%', width: '20rem'}} helperText = "Input your firstname" onChange = {handleChange("firstName")} value={values.firstName}/>
+                    <br/>
+                    <TextField variant = "standard" sx = {{position: 'relative', my: '5%', width: '20rem'}} helperText = "Input your lastname" onChange = {handleChange("lastname")} value={values.lastName}/>
+                    <br/>
+                    <TextField variant = "standard" sx = {{position: 'relative', my: '5%', width: '20rem'}} helperText = "Input your email" onChange = {handleChange("email")} value={values.email}/>
+                    <br/>
+                    <Button variant='contained' children = 'CONTINUE' onClick={this.continue}/>
                 </React.Fragment>
             </ThemeProvider>
         )
