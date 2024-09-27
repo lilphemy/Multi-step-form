@@ -1,4 +1,4 @@
-import { Button, Container } from '@mui/material';
+import { Button, Container, TextField } from '@mui/material';
 import styled from 'styled-components';
 
 
@@ -7,8 +7,8 @@ display: flex;
 flex-direction: column;
 justify-content: center;
 align-items: center;
-width: 100%;
-margi: 0 auto;
+width: 70%;
+margin: 0 auto;
 `
 
 export const BtnCont = styled(Container)`
@@ -18,4 +18,10 @@ justify-content: space-between;
 align-items: center;
 width: 60%;
 margi: 0 auto;
+`
+
+export const DynTextField = styled(TextField)`
+position: relative;
+margin: 5% 0;
+width: 100%;
 `

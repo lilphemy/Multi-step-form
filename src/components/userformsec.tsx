@@ -36,7 +36,7 @@ class UserForm extends Component {
 
     // handle fields change
 
-    changeField = (input: string) => (e: ChangeEvent<HTMLInputElement>) => {
+    changeField = (input: string) => (e: ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
         this.setState({[input]: e.target.value})
     }
 

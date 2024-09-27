@@ -1,9 +1,8 @@
 import React, { FormEvent, Component } from 'react'
 import { ThemeProvider, createTheme } from '@mui/material/styles'
 import AppBar from '@mui/material/AppBar'
-import TextField from '@mui/material/TextField'
 import { Toolbar, Typography, IconButton, Button } from '@mui/material'
-import {StyledCont} from '../styledcomp'
+import {DynTextField, StyledCont} from '../styledcomp'
 
 
 const theme = createTheme({
@@ -50,11 +49,11 @@ class FormUserDetails extends Component<formUserDetails> {
                         <Typography sx={{ fontFamily: "sans-serif", color: "WindowText", width: '95%', textAlign: 'center' }}>Multiple step form</Typography>
                     </AppBar>
                     <StyledCont>
-                        <TextField variant="filled" sx={{ position: 'relative', my: '5%', width: '20rem' }} placeholder="firstname" fullWidth = {true} onChange={handleChange("firstName")} value={values.firstName} />
+                        <DynTextField placeholder="firstname" fullWidth = {true} onChange={handleChange("firstName")} value={values.firstName} />
                         <br />
-                        <TextField variant="filled" sx={{ position: 'relative', my: '5%', width: '20rem' }} placeholder="lastname" fullWidth = {true} onChange={handleChange("lastname")} value={values.lastName} />
+                        <DynTextField placeholder="lastname" fullWidth = {true} onChange={handleChange("lastname")} value={values.lastName} />
                         <br />
-                        <TextField variant="filled" sx={{ position: 'relative', my: '5%', width: '20rem' }} placeholder="email" fullWidth = {true} onChange={handleChange("email")} value={values.email} />
+                        <DynTextField placeholder="email" fullWidth = {true} onChange={handleChange("email")} value={values.email} />
                         <br />
                         <Button variant='contained' children='CONTINUE' onClick={this.continue} />
                     </StyledCont>
