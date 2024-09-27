@@ -2,6 +2,7 @@ import React, { ChangeEvent } from 'react'
 import {Component} from 'react'
 import { Button } from '@mui/material'
 import FormUserDetails from './userpersonaldetails'
+import UserContactDetails from './usercontactdetails'
 
 class UserForm extends Component {
 
@@ -54,10 +55,10 @@ class UserForm extends Component {
 
         if(step === 2 ) {
             return(
-                <React.Fragment>
-                    <Button variant = "contained">personal contacts</Button>
-                </React.Fragment>
-                
+                // <React.Fragment>
+                //     <Button variant = "contained">personal contacts</Button>
+                // </React.Fragment>
+                <UserContactDetails prevStep = {this.prevStep} nextStep={this.nextStep} values={values} handleChange={this.changeField}/>
             )
         }
 
