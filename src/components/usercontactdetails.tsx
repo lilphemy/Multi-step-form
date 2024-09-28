@@ -1,4 +1,4 @@
-import { AppBar, Toolbar, Typography, Button} from '@mui/material';
+import {Toolbar, Typography, Button} from '@mui/material';
 import React from 'react'
 import { StyledCont, BtnCont, DynTextField, AppBarCont } from '../styledcomp';
 
@@ -45,8 +45,8 @@ class UserContactDetails extends React.Component<formUserDetails> {
                     <DynTextField placeholder = "bio" fullWidth = {true}  value = {bio} onChange={handleChange("bio")}/>
                 </StyledCont>
                 <BtnCont>
-                    <Button onClick={prevStep}>back</Button>
-                    <Button onClick={nextStep}>next</Button>
+                    <Button variant='outlined' onClick={this.back} children = "back" />
+                    <Button variant='outlined' onClick={this.continue} children = "next"/>
                 </BtnCont>
             </React.Fragment>
         )

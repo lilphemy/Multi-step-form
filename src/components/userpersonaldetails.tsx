@@ -1,6 +1,4 @@
-import React, { FormEvent, Component } from 'react'
-import { ThemeProvider, createTheme } from '@mui/material/styles'
-import AppBar from '@mui/material/AppBar'
+import React, {Component } from 'react'
 import { Toolbar, Typography, IconButton, Button } from '@mui/material'
 import {DynTextField, StyledCont, AppBarCont} from '../styledcomp'
 
@@ -43,7 +41,7 @@ class FormUserDetails extends Component<formUserDetails> {
                     <StyledCont>
                         <DynTextField placeholder="firstname" fullWidth = {true} onChange={handleChange("firstName")} value={values.firstName} />
                         <br />
-                        <DynTextField placeholder="lastname" fullWidth = {true} onChange={handleChange("lastname")} value={values.lastName} />
+                        <DynTextField placeholder="lastname" fullWidth = {true} onChange={handleChange("lastName")} value={values.lastName} />
                         <br />
                         <DynTextField placeholder="email" fullWidth = {true} onChange={handleChange("email")} value={values.email} />
                         <br />

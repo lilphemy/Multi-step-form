@@ -1,4 +1,4 @@
-import { Button, Container, TextField, AppBar, List, ListItem } from '@mui/material';
+import { Container, TextField, AppBar, List } from '@mui/material';
 import styled from 'styled-components';
 
 
@@ -7,7 +7,7 @@ display: flex;
 flex-direction: column;
 justify-content: center;
 align-items: center;
-width: 40%;
+width: 60%;
 margin: 0 auto;
 `
 export const AppBarCont = styled(AppBar)`
@@ -24,7 +24,7 @@ flex-direction: row;
 justify-content: space-between;
 width: 60%;
 align-items: center;
-margi: 0 auto;
+margin: 2rem auto;
 `
 
 export const DynTextField = styled(TextField)`
@@ -34,7 +34,9 @@ width: 100%;
 `
 
 export const ListCont = styled(List)`
-background-color: blue;
+background-color: rgba(20, 5, 30, 0.1);
 font-family: sans-sarif;
+width: 60%;
+margin-top: 2rem;
 text-align: center;
 `

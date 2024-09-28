@@ -3,6 +3,17 @@ import {Component} from 'react'
 import { Button } from '@mui/material'
 import FormUserDetails from './userpersonaldetails'
 import UserContactDetails from './usercontactdetails'
+import ConfirmFormPage from './confirmation'
+
+interface stateType {
+    step: number,
+    firstName: string,
+    lastName: string,
+    email: string,
+    occupation: string,
+    city: string,
+    bio: string
+}
 
 class UserForm extends Component {
 
@@ -34,6 +45,15 @@ class UserForm extends Component {
         })
     }
 
+    //continue button
+    contPage = () => {
+        const {step, firstName, lastName, email, occupation, city, bio} = this.state
+        const id = new Date().getSeconds().toPrecision(2);
+        const newPerson = {id: id, firstName, lastName, email, occupation, city, bio}
+        localStorage.setItem(`new user ${id}`, `${newPerson}`);
+        this.setState({step: step + 1, firstName: "", lastName: "", email: "", occupation: "", city: "", bio: ""})
+    }
+
     // handle fields change
 
     changeField = (input: string) => (e: ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
@@ -45,37 +65,27 @@ class UserForm extends Component {
         const values = {step, firstName, lastName, email, occupation, city, bio}
         if(step === 1) {
             return(
-                // <React.Fragment>
-                //     <h2> holla world!</h2>
-                //     <Button variant = "contained"> You feel me!</Button>
-                // </React.Fragment>
                 <FormUserDetails nextStep = {this.nextStep} handleChange = {this.changeField} values = {values} />
             )
         }
 
         if(step === 2 ) {
             return(
-                // <React.Fragment>
-                //     <Button variant = "contained">personal contacts</Button>
-                // </React.Fragment>
                 <UserContactDetails prevStep = {this.prevStep} nextStep={this.nextStep} values={values} handleChange={this.changeField}/>
             )
         }
 
         if(step === 3 ) {
             return(
-                <React.Fragment>
-                    <Button variant = "contained">confirmation</Button>
-                </React.Fragment>
-                
+                <ConfirmFormPage values = {values} contForm = {this.contPage} backPage = {this.prevStep}/>
             )
         }
+        
         if(step === 4 ) {
             return(
                 <React.Fragment>
                     <Button variant = "contained">success</Button>
                 </React.Fragment>
-                
             )
         }
         
