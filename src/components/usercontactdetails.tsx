@@ -1,6 +1,6 @@
 import { AppBar, Toolbar, Typography, Button} from '@mui/material';
 import React from 'react'
-import { StyledCont, BtnCont, DynTextField } from '../styledcomp';
+import { StyledCont, BtnCont, DynTextField, AppBarCont } from '../styledcomp';
 
 
 interface formUserDetails {
@@ -34,11 +34,11 @@ class UserContactDetails extends React.Component<formUserDetails> {
         const {occupation, city, bio} = values
         return (
             <React.Fragment>
-                <AppBar sx={{ textAlign: "center", position: "relative", flex: "flex", flexDirection: 'row', justifyContent: "space-between" }}>
+                <AppBarCont>
                     <Toolbar>
                     </Toolbar>
-                        <Typography>Form contact details</Typography>
-                </AppBar>
+                        <Typography sx={{backgoundColor: 'yellow'}}>Form contact details</Typography>
+                </AppBarCont>
                 <StyledCont>
                     <DynTextField placeholder = "occupation" fullWidth = {true}  value = {occupation} onChange={handleChange("occupation")}/>
                     <DynTextField placeholder = "city" fullWidth = {true}  value = {city} onChange={handleChange("city")}/>
