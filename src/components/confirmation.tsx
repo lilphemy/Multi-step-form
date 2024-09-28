@@ -1,6 +1,6 @@
 import React from 'react'
-import { StyledCont, BtnCont, ListCont, AppBarCont } from '../styledcomp'
-import { ListItem, Toolbar, Typography, ListItemText, Button } from '@mui/material'
+import { StyledCont, BtnCont, ListCont, AppBarCont, ListItemCont } from '../styledcomp'
+import { Toolbar, Typography, ListItem, ListItemText, Button } from '@mui/material'
 
 interface compProps {
     contForm: () => void,
@@ -30,12 +30,14 @@ class ConfirmFormPage extends React.Component<compProps> {
                 </AppBarCont>
                 <StyledCont>
                     <ListCont>
-                        <ListItem component={ListItemText} primary='firstname' secondary={firstName} />
-                        <ListItem component={ListItemText} primary='lastname' secondary={lastName} />
-                        <ListItem component={ListItemText} primary='email' secondary={email} />
-                        <ListItem component={ListItemText} primary='occupation' secondary={occupation} />
-                        <ListItem component={ListItemText} primary='city' secondary={city} />
-                        <ListItem component={ListItemText} primary='bio' secondary={bio} />
+                        <ListItem component={ListItemText} >
+                            <ListItemCont primary='firstname' secondary={firstName}/>
+                            <ListItemCont primary='lastname' secondary={lastName}/>
+                            <ListItemCont primary='email' secondary={email}/>
+                            <ListItemCont primary='occupation' secondary={occupation}/>
+                            <ListItemCont primary='city' secondary={city}/>
+                            <ListItemCont primary='bio' secondary={bio}/>
+                        </ListItem>
                     </ListCont>
                 </StyledCont>
                 <BtnCont>

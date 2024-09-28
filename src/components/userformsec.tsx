@@ -47,9 +47,15 @@ class UserForm extends Component {
 
     //continue button
     contPage = () => {
+
         const {step, firstName, lastName, email, occupation, city, bio} = this.state
-        const id = new Date().getSeconds().toPrecision(2);
+        const id = Math.floor(Math.random() * 1000).toPrecision(1)
+
+        //new person object is formed using variable as title name, an ES6 feature in JS
+
         const newPerson = {id: id, firstName, lastName, email, occupation, city, bio}
+        
+        //console.log(newPerson, localStorage.getItem("new user 5"), localStorage.getItem('new user 1.0'))
         localStorage.setItem(`new user ${id}`, `${newPerson}`);
         this.setState({step: step + 1, firstName: "", lastName: "", email: "", occupation: "", city: "", bio: ""})
     }
@@ -80,7 +86,7 @@ class UserForm extends Component {
                 <ConfirmFormPage values = {values} contForm = {this.contPage} backPage = {this.prevStep}/>
             )
         }
-        
+
         if(step === 4 ) {
             return(
                 <React.Fragment>

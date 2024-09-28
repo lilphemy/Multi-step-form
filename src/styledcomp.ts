@@ -1,4 +1,4 @@
-import { Container, TextField, AppBar, List } from '@mui/material';
+import { Container, TextField, AppBar, List, ListItemText } from '@mui/material';
 import styled from 'styled-components';
 
 
@@ -34,9 +34,16 @@ width: 100%;
 `
 
 export const ListCont = styled(List)`
-background-color: rgba(20, 5, 30, 0.1);
 font-family: sans-sarif;
 width: 60%;
 margin-top: 2rem;
 text-align: center;
+`
+
+export const ListItemCont = styled(ListItemText)`
+text-align: center;
+font-family: times new romans;
+color: cornflowerblue;
+text-transform: capitalize;
+padding: 1.5rem;
 `
