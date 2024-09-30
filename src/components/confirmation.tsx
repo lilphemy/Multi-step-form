@@ -1,6 +1,6 @@
 import React from 'react'
 import { NewStyledCont, BtnCont, ListCont, AppBarCont, ListItemCont, HeadTypoCont } from '../styledcomp'
-import { Toolbar, Typography, ListItem, ListItemText, Button } from '@mui/material'
+import { Toolbar, ListItem, ListItemText, Button } from '@mui/material'
 
 interface compProps {
     contForm: () => void,
