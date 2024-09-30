@@ -30,7 +30,7 @@ class UserContactDetails extends React.Component<formUserDetails> {
     }
 
     render() {
-        const {values, nextStep, prevStep, handleChange} = this.props
+        const {values, handleChange} = this.props
         const {occupation, city, bio} = values
         return (
             <React.Fragment>

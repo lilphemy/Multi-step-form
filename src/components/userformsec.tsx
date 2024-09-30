@@ -5,15 +5,15 @@ import FormUserDetails from './userpersonaldetails'
 import UserContactDetails from './usercontactdetails'
 import ConfirmFormPage from './confirmation'
 
-interface stateType {
-    step: number,
-    firstName: string,
-    lastName: string,
-    email: string,
-    occupation: string,
-    city: string,
-    bio: string
-}
+// interface stateType {
+//     step: number,
+//     firstName: string,
+//     lastName: string,
+//     email: string,
+//     occupation: string,
+//     city: string,
+//     bio: string
+// }
 
 class UserForm extends Component {
 

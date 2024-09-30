@@ -7,11 +7,14 @@ display: flex;
 flex-direction: column;
 justify-content: center;
 align-items: center;
-width: 60%;
+width: 50%;
+height: 50%;
 margin: 0 auto;
+background-color: dodgerblue;
 `
 export const AppBarCont = styled(AppBar)`
 position: relative;
+z-index: 0;
 flex: flex;
 flex-direction: row;
 justify-content: space-beween;

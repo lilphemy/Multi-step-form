@@ -21,7 +21,7 @@ class ConfirmFormPage extends React.Component<compProps> {
         this.props.contForm()
     }
     render() {
-        const { values: { firstName, lastName, email, city, occupation, bio }, contForm, backPage } = this.props
+        const { values: { firstName, lastName, email, city, occupation, bio }, backPage } = this.props
         return (
             <React.Fragment>
                 <AppBarCont>

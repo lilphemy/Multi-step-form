@@ -16,7 +16,6 @@ interface formUserDetails {
         city: string;
         bio: string;
     }
-
 }
 
 class FormUserDetails extends Component<formUserDetails> {
