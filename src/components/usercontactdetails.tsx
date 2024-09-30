@@ -40,9 +40,9 @@ class UserContactDetails extends React.Component<formUserDetails> {
                         <Typography sx={{backgoundColor: 'yellow'}}>Form contact details</Typography>
                 </AppBarCont>
                 <StyledCont>
-                    <DynTextField placeholder = "occupation" fullWidth = {true}  value = {occupation} onChange={handleChange("occupation")}/>
-                    <DynTextField placeholder = "city" fullWidth = {true}  value = {city} onChange={handleChange("city")}/>
-                    <DynTextField placeholder = "bio" fullWidth = {true}  value = {bio} onChange={handleChange("bio")}/>
+                    <DynTextField required = {true} placeholder = "occupation" fullWidth = {true}  value = {occupation} onChange={handleChange("occupation")}/>
+                    <DynTextField required = {true} placeholder = "city" fullWidth = {true}  value = {city} onChange={handleChange("city")}/>
+                    <DynTextField required = {true} placeholder = "bio" fullWidth = {true}  value = {bio} onChange={handleChange("bio")}/>
                 </StyledCont>
                 <BtnCont>
                     <Button variant='outlined' onClick={this.back} children = "back" />

@@ -38,13 +38,13 @@ class FormUserDetails extends Component<formUserDetails> {
                         <Typography sx={{ fontFamily: "sans-serif", color: "WindowText", width: '95%', textAlign: 'center' }}>Multiple step form</Typography>
                     </AppBarCont>
                     <StyledCont>
-                        <DynTextField placeholder="firstname" fullWidth = {true} onChange={handleChange("firstName")} value={values.firstName} />
+                        <DynTextField required = {true} placeholder="firstname" fullWidth = {true} onChange={handleChange("firstName")} value={values.firstName} />
                         <br />
-                        <DynTextField placeholder="lastname" fullWidth = {true} onChange={handleChange("lastName")} value={values.lastName} />
+                        <DynTextField required = {true} placeholder="lastname" fullWidth = {true} onChange={handleChange("lastName")} value={values.lastName} />
                         <br />
-                        <DynTextField placeholder="email" fullWidth = {true} onChange={handleChange("email")} value={values.email} />
+                        <DynTextField required = {true} placeholder="email" fullWidth = {true} onChange={handleChange("email")} value={values.email} />
                         <br />
-                        <Button variant='contained' children='CONTINUE' onClick={this.continue} />
+                        <Button variant='outlined' children='CONTINUE' onClick={this.continue} />
                     </StyledCont>
                 </React.Fragment>
         )

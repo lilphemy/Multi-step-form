@@ -8,9 +8,22 @@ flex-direction: column;
 justify-content: center;
 align-items: center;
 width: 50%;
-height: 50%;
+height: 80%;
 margin: 0 auto;
-background-color: dodgerblue;
+margin-top: 5%;
+padding: 2rem;
+`
+export const NewStyledCont = styled('div')`
+display: flex;
+flex-direction: column;
+justify-content: center;
+align-items: center;
+width: 50%;
+height: 80%;
+margin: 0 auto;
+margin-top: 5%;
+padding: 0 auto;
+border: 2px solid #00b4d8;
 `
 export const AppBarCont = styled(AppBar)`
 position: relative;

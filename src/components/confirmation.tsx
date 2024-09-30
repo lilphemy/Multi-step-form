@@ -1,5 +1,5 @@
 import React from 'react'
-import { StyledCont, BtnCont, ListCont, AppBarCont, ListItemCont } from '../styledcomp'
+import { NewStyledCont, BtnCont, ListCont, AppBarCont, ListItemCont } from '../styledcomp'
 import { Toolbar, Typography, ListItem, ListItemText, Button } from '@mui/material'
 
 interface compProps {
@@ -28,7 +28,7 @@ class ConfirmFormPage extends React.Component<compProps> {
                     <Toolbar></Toolbar>
                     <Typography> confirmation page</Typography>
                 </AppBarCont>
-                <StyledCont>
+                <NewStyledCont>
                     <ListCont>
                         <ListItem component={ListItemText} >
                             <ListItemCont primary='firstname' secondary={firstName}/>
@@ -39,7 +39,7 @@ class ConfirmFormPage extends React.Component<compProps> {
                             <ListItemCont primary='bio' secondary={bio}/>
                         </ListItem>
                     </ListCont>
-                </StyledCont>
+                </NewStyledCont>
                 <BtnCont>
                     <Button variant='outlined' children='back' onClick={backPage} />
                     <Button variant='outlined' children='Confirm and Continue' onClick={this.confirm} />
