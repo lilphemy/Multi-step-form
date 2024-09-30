@@ -1,5 +1,5 @@
 import React from 'react'
-import { NewStyledCont, BtnCont, ListCont, AppBarCont, ListItemCont } from '../styledcomp'
+import { NewStyledCont, BtnCont, ListCont, AppBarCont, ListItemCont, HeadTypoCont } from '../styledcomp'
 import { Toolbar, Typography, ListItem, ListItemText, Button } from '@mui/material'
 
 interface compProps {
@@ -26,7 +26,7 @@ class ConfirmFormPage extends React.Component<compProps> {
             <React.Fragment>
                 <AppBarCont>
                     <Toolbar></Toolbar>
-                    <Typography> confirmation page</Typography>
+                    <HeadTypoCont> confirmation page</HeadTypoCont>
                 </AppBarCont>
                 <NewStyledCont>
                     <ListCont>

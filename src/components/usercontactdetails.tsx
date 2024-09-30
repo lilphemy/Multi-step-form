@@ -1,6 +1,6 @@
 import {Toolbar, Typography, Button} from '@mui/material';
 import React from 'react'
-import { StyledCont, BtnCont, DynTextField, AppBarCont } from '../styledcomp';
+import { StyledCont, BtnCont, DynTextField, AppBarCont, HeadTypoCont } from '../styledcomp';
 
 
 interface formUserDetails {
@@ -37,7 +37,7 @@ class UserContactDetails extends React.Component<formUserDetails> {
                 <AppBarCont>
                     <Toolbar>
                     </Toolbar>
-                        <Typography sx={{backgoundColor: 'yellow'}}>Form contact details</Typography>
+                        <HeadTypoCont >Form contact details</HeadTypoCont>
                 </AppBarCont>
                 <StyledCont>
                     <DynTextField required = {true} placeholder = "occupation" fullWidth = {true}  value = {occupation} onChange={handleChange("occupation")}/>

@@ -1,4 +1,4 @@
-import { Container, TextField, AppBar, List, ListItemText } from '@mui/material';
+import { Container, TextField, AppBar, List, ListItemText, Typography } from '@mui/material';
 import styled from 'styled-components';
 
 
@@ -62,4 +62,13 @@ font-family: times new romans;
 color: cornflowerblue;
 text-transform: capitalize;
 padding: 1.5rem;
+`
+export const HeadTypoCont = styled(Typography)`
+font-family: serif;
+margin: 0 auto;
+text-align: center;
+font-size: 24px;
+padding: 2rem;
+color: #F8F6E3;
+font-weight: 700;
 `
