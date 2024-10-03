@@ -1,9 +1,9 @@
-import React, { ChangeEvent } from 'react'
+import { ChangeEvent } from 'react'
 import {Component} from 'react'
-import { Button } from '@mui/material'
 import FormUserDetails from './userpersonaldetails'
 import UserContactDetails from './usercontactdetails'
 import ConfirmFormPage from './confirmation'
+import Success from './success'
 
 // interface stateType {
 //     step: number,
@@ -89,9 +89,7 @@ class UserForm extends Component {
 
         if(step === 4 ) {
             return(
-                <React.Fragment>
-                    <Button variant = "contained">success</Button>
-                </React.Fragment>
+                <Success/>
             )
         }
         
