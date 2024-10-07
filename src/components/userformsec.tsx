@@ -12,7 +12,7 @@ import Success from './success'
 //     email: string,
 //     occupation: string,
 //     city: string,
-//     bio: string
+//     bio: string/
 // }
 
 class UserForm extends Component {
@@ -59,7 +59,7 @@ class UserForm extends Component {
         localStorage.setItem(`new user ${id}`, `${newPerson}`);
         this.setState({step: step + 1, firstName: "", lastName: "", email: "", occupation: "", city: "", bio: ""})
     }
-
+    
     // handle fields change
 
     changeField = (input: string) => (e: ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
@@ -73,7 +73,7 @@ class UserForm extends Component {
             return(
                 <FormUserDetails nextStep = {this.nextStep} handleChange = {this.changeField} values = {values} />
             )
-        }
+        }      
 
         if(step === 2 ) {
             return(
@@ -86,7 +86,7 @@ class UserForm extends Component {
                 <ConfirmFormPage values = {values} contForm = {this.contPage} backPage = {this.prevStep}/>
             )
         }
-
+        
         if(step === 4 ) {
             return(
                 <Success/>
